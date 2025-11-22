@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julián David - Software Engineer & Network Specialist</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-icon">&lt;JD/&gt;</span>
+                <span class="brand-text">Julián David</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="sobre-mi.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="experiencia.html" class="nav-link">Experiencia</a></li>
+                <li><a href="educacion.html" class="nav-link">Educación</a></li>
+                <li><a href="habilidades.html" class="nav-link">Habilidades</a></li>
+                <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO -->
+    <section class="hero">
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">¡Hola! Soy</p>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Julián David</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text">Software Engineer & Network Specialist</span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Estudiante de Ingeniería de Software con más de <strong>3 años de experiencia</strong> 
+                        en telecomunicaciones y redes. Especializado en soporte técnico avanzado, 
+                        gestión de redes GPON, y desarrollo backend con Python.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Años Experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">420+</span>
+                            <span class="stat-label">Tickets/Mes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Satisfacción</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="contacto.html" class="btn btn-primary">
+                            <span>Contáctame</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="proyectos.html" class="btn btn-secondary">
+                            <span>Ver Proyectos</span>
+                        </a>
+                        <a href="#" class="btn btn-outline" onclick="descargarCV(event)">
+                            <span>Descargar CV</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 3v10m0 0l4-4m-4 4L6 9m11 8H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-img-wrapper">
+                            <img src="images/perfil.jpg" alt="Julián David" class="profile-img">
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Disponible</span>
+                            </div>
+                        </div>
+                        <div class="floating-tech tech-1">Python</div>
+                        <div class="floating-tech tech-2">GPON</div>
+                        <div class="floating-tech tech-3">IPv6</div>
+                        <div class="floating-tech tech-4">Network</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll para explorar</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ (RESUMEN) -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conóceme</span>
+                <h2 class="section-title">Sobre Mí</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        Actualmente estudiante de <strong>Ingeniería de Software</strong> en quinto semestre 
+                        en la Universidad Panamericana de Colombia, con una sólida trayectoria en el sector 
+                        de telecomunicaciones trabajando para empresas reconocidas como <strong>ETB</strong>.
+                    </p>
+                    <p>
+                        Mi experiencia abarca desde soporte técnico especializado en redes GPON (Huawei y ZTE), 
+                        gestión de NVOC, hasta desarrollo backend con Python. Me caracterizo por mi capacidad 
+                        de aprendizaje continuo, excelentes relaciones interpersonales y orientación a resultados.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-text">
+                                <h4>Orientado a Resultados</h4>
+                                <p>Reducción del 30% en tiempo de resolución de tickets</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🚀</div>
+                            <div class="highlight-text">
+                                <h4>Mejora Continua</h4>
+                                <p>Aumento del 40% en eficiencia de redes GPON</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">👥</div>
+                            <div class="highlight-text">
+                                <h4>Liderazgo</h4>
+                                <p>Capacitación de 10+ miembros del equipo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sobre-mi.html" class="link-arrow">
+                        Conoce más sobre mi trayectoria
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="about-cards">
+                    <div class="info-card">
+                        <div class="card-header">
+                            <span class="card-icon">📍</span>
+                            <h3>Ubicación</h3>
+                        </div>
+                        <p>Bogotá D.C., Colombia</p>
+                        <p class="card-detail">Carrera 121a # 17f-44</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-header">
+                            <span class="card-icon">🎓</span>
+                            <h3>Educación</h3>
+                        </div>
+                        <p>Ingeniería de Software</p>
+                        <p class="card-detail">5to Semestre - U. Panamericana</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-header">
+                            <span class="card-icon">💼</span>
+                            <h3>Rol Actual</h3>
+                        </div>
+                        <p>Analista de Apoyo</p>
+                        <p class="card-detail">Consorcio BFTEL</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-header">
+                            <span class="card-icon">🌐</span>
+                            <h3>Idiomas</h3>
+                        </div>
+                        <p>Español (Nativo)</p>
+                        <p class="card-detail">Inglés (Intermedio)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIA DESTACADA -->
+    <section class="experience-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mi Trayectoria</span>
+                <h2 class="section-title">Experiencia Profesional</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Oct 2024 - Actualidad</span>
+                        <h3>Analista de Apoyo en Centro de Operaciones</h3>
+                        <h4>Consorcio BFTEL</h4>
+                        <ul class="timeline-list">
+                            <li>Resolución de problemas de soporte operativo para clientes de primer nivel</li>
+                            <li>Gestión avanzada de conectividad WAN/LAN/WLAN/PAN/MAN/GAN/VPN</li>
+                            <li>Manejo de protocolos OSPF, BGP, STP y seguridad en redes (Firewalls, ACLs, IDS)</li>
+                            <li>Administración de VoIP (SIP, IAX, H.323, MGP, SCCP) y VPN (FortiClient, Checkpoint)</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">OSPF</span>
+                            <span class="tech-tag">BGP</span>
+                            <span class="tech-tag">VoIP</span>
+                            <span class="tech-tag">VPN</span>
+                            <span class="tech-tag">Firewalls</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2023 - Sep 2024</span>
+                        <h3>Operador en NVOC ETB</h3>
+                        <h4>NETWORKING S.A.S</h4>
+                        <ul class="timeline-list">
+                            <li>Operación y control de Network Operation Center (NVOC)</li>
+                            <li>Manejo de gestores U2000, N2000, Friendly, TR69, ZENIC ONE (Huawei)</li>
+                            <li>Soporte de consola para tecnología FTTC/FTTH</li>
+                            <li>Gestión de indicadores y actualización de datos en sistemas corporativos</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">NVOC</span>
+                            <span class="tech-tag">U2000</span>
+                            <span class="tech-tag">FTTH</span>
+                            <span class="tech-tag">Huawei</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Nov 2022 - May 2023</span>
+                        <h3>Analista en Centro de Apoyo ETB</h3>
+                        <h4>Redes y Edificaciones S.A</h4>
+                        <ul class="timeline-list">
+                            <li>Soporte técnico en terreno para tecnologías CU, FTTC, FTTH con redes GPON</li>
+                            <li>Gestión de equipos ZTE y Huawei, Zenic ONE</li>
+                            <li>Manejo de IPS, NODOS, OLTS, NAPS y escalamientos a NOC</li>
+                            <li>Resolución rápida de incidencias técnicas con alto nivel de satisfacción</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">GPON</span>
+                            <span class="tech-tag">ZTE</span>
+                            <span class="tech-tag">Huawei</span>
+                            <span class="tech-tag">OLTs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="experiencia.html" class="btn btn-primary">Ver Experiencia Completa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES TÉCNICAS -->
+    <section class="skills-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Stack Técnico</span>
+                <h2 class="section-title">Habilidades y Tecnologías</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🌐</span>
+                        <h3>Redes y Telecomunicaciones</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">GPON (Huawei/ZTE)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">FTTH/FTTC</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">IPv4/IPv6</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TCP/UDP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">💻</span>
+                        <h3>Desarrollo y Programación</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python (Backend)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🛠️</span>
+                        <h3>Herramientas y Sistemas</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">NVOC</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">U2000/N2000</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Remedy/UFINET</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MS Office</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🔧</span>
+                        <h3>Protocolos y Seguridad</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">BGP/OSPF</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">VoIP (SIP/H.323)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Firewalls/ACLs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">VPN Management</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="habilidades.html" class="btn btn-secondary">Ver Todas las Habilidades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN LOGROS -->
+    <section class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mis Logros</span>
+                <h2 class="section-title">Impacto y Resultados</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">⚡</div>
+                    <h3>Eficiencia del Soporte Técnico</h3>
+                    <p class="achievement-result">+420 tickets mensuales</p>
+                    <p class="achievement-description">
+                        Gestión de más de 420 tickets de soporte técnico mensualmente, 
+                        reduciendo el tiempo de resolución en un <strong>30%</strong>.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <h3>Excelencia en Servicio al Cliente</h3>
+                    <p class="achievement-result">95% satisfacción</p>
+                    <p class="achievement-description">
+                        Manejo de más de 100 llamadas diarias de técnicos, logrando una 
+                        tasa de satisfacción del cliente del <strong>95%</strong>.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🚀</div>
+                    <h3>Liderazgo en Redes GPON</h3>
+                    <p class="achievement-result">+40% eficiencia</p>
+                    <p class="achievement-description">
+                        Lideré un equipo para actualizar 124 redes GPON, aumentando 
+                        la eficiencia operativa en un <strong>40%</strong>.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">👨‍🏫</div>
+                    <h3>Líder del Programa de Capacitación</h3>
+                    <p class="achievement-result">10 miembros formados</p>
+                    <p class="achievement-description">
+                        Capacitación de 10 nuevos miembros del equipo, mejorando la 
+                        eficiencia del proceso de incorporación en un <strong>20%</strong>.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🔧</div>
+                    <h3>Optimización con Python</h3>
+                    <p class="achievement-result">+30% capacidad</p>
+                    <p class="achievement-description">
+                        Mejoré la capacidad de red en un <strong>30%</strong> al optimizar 
+                        configuraciones mediante scripts de Python.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">📜</div>
+                    <h3>Certificaciones</h3>
+                    <p class="achievement-result">SENA</p>
+                    <p class="achievement-description">
+                        Certificado en Conocimientos y Principios Básicos de Electricidad 
+                        por el <strong>SENA</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CTA (CALL TO ACTION) -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Buscas un profesional comprometido y orientado a resultados?</h2>
+                <p class="cta-description">
+                    Estoy disponible para nuevas oportunidades y proyectos desafiantes. 
+                    Conectemos y conversemos sobre cómo puedo aportar valor a tu equipo.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-primary btn-large">
+                        Hablemos
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/julian-góngora-616742239/" target="_blank" class="btn btn-outline btn-large">
+                        Ver LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">&lt;JD/&gt;</h3>
+                    <p class="footer-description">
+                        Ingeniero de Software y Especialista en Redes<br>
+                        Comprometido con la excelencia técnica y la innovación continua.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                        <li><a href="experiencia.html">Experiencia</a></li>
+                        <li><a href="educacion.html">Educación</a></li>
+                        <li><a href="habilidades.html">Habilidades</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M2 6l8 5 8-5M4 4h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <a href="mailto:fa3797576@gmail.com">fa3797576@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm4 4h6m-6 4h6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>523222201667</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 2C6.134 2 3 5.134 3 9c0 4.5 7 11 7 11s7-6.5 7-11c0-3.866-3.134-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Bogotá D.C., Colombia</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Sígueme</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/julian-góngora-616742239/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:fa3797576@gmail.com" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+                                <path d="M22 6l-10 7L2 6" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Julián David Góngora. Todos los derechos reservados.</p>
+                <p class="footer-credit">Diseñado y desarrollado con 💙 y dedicación</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 19V5m-7 7l7-7 7 7" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Toggle menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+            
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animación de números contador
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + (element.dataset.suffix || '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + (element.dataset.suffix || '');
+                }
+            }, 16);
+        }
+
+        // Intersection Observer para animaciones
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    
+                    // Animar contadores
+                    if (entry.target.classList.contains('stat-number')) {
+                        const target = parseInt(entry.target.textContent);
+                        const suffix = entry.target.textContent.replace(/[0-9]/g, '');
+                        entry.target.dataset.suffix = suffix;
+                        animateCounter(entry.target, target);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos
+        document.querySelectorAll('.timeline-item, .achievement-card, .skill-category, .stat-number, .info-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Función para descargar CV
+        function descargarCV(event) {
+            event.preventDefault();
+            alert('¡Gracias por tu interés! Esta funcionalidad descargará el CV en formato PDF.');
+            // Aquí iría la lógica real para descargar el CV
+        }
+
+        // Efecto de parallax suave en hero
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.4}px)`;
+                heroContent.style.opacity = 1 - (scrolled / 600);
+            }
+        });
+
+        // Animación del cursor typing
+        const typingText = document.querySelector('.typing-text');
+        const cursor = document.querySelector('.cursor');
+        if (typingText && cursor) {
+            setInterval(() => {
+                cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+            }, 530);
+        }
+    </script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

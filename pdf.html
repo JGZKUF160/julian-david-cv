@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - Portafolio Julián David</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: white;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 2em;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::before {
+            content: '▶';
+            color: #ec4899;
+        }
+        
+        .subsection {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+        }
+        
+        .subsection h3 {
+            color: #334155;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .code-block code {
+            display: block;
+            white-space: pre;
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .color-item {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .info-box {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .info-box h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .feature-list li {
+            padding: 12px;
+            background: white;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .feature-list li::before {
+            content: '✓ ';
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .structure-diagram {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            margin: 20px 0;
+        }
+        
+        .file-tree {
+            font-family: 'Courier New', monospace;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .file-tree div {
+            padding: 5px 0;
+            padding-left: 20px;
+        }
+        
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f8fafc;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+        }
+        
+        .print-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .print-button {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .code-block {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">📄 Guardar como PDF</button>
+    
+    <div class="header">
+        <h1>📋 DOCUMENTACIÓN TÉCNICA</h1>
+        <p>Portafolio Web Profesional - Julián David Góngora</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">Ingeniería de Software | Universidad Panamericana</p>
+    </div>
+
+    <!-- ÍNDICE -->
+    <div class="section">
+        <h2 class="section-title">📑 Índice de Contenido</h2>
+        <div class="subsection">
+            <ol style="line-height: 2;">
+                <li><strong>Introducción al Proyecto</strong></li>
+                <li><strong>Estructura del Proyecto</strong></li>
+                <li><strong>Paleta de Colores y Diseño Visual</strong></li>
+                <li><strong>Tecnologías Utilizadas</strong></li>
+                <li><strong>Estructura HTML - Páginas</strong></li>
+                <li><strong>Estilos CSS - Componentes</strong></li>
+                <li><strong>JavaScript - Funcionalidades</strong></li>
+                <li><strong>Características Destacadas</strong></li>
+                <li><strong>Responsive Design</strong></li>
+                <li><strong>Conclusiones</strong></li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 1. INTRODUCCIÓN -->
+    <div class="section">
+        <h2 class="section-title">1. Introducción al Proyecto</h2>
+        
+        <div class="subsection">
+            <h3>Descripción General</h3>
+            <p>Este proyecto consiste en un <span class="highlight">portafolio web profesional</span> desarrollado completamente desde cero utilizando tecnologías web fundamentales: HTML5, CSS3 y JavaScript vanilla. El sitio web está diseñado para presentar de manera profesional y atractiva la experiencia, habilidades y proyectos de un ingeniero de software especializado en redes y telecomunicaciones.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Objetivos del Proyecto</h3>
+            <ul class="feature-list">
+                <li>Crear una presencia web profesional y moderna</li>
+                <li>Mostrar experiencia laboral de más de 3 años en telecomunicaciones</li>
+                <li>Presentar habilidades técnicas en redes, GPON, Python y desarrollo web</li>
+                <li>Demostrar capacidades de diseño y desarrollo frontend</li>
+                <li>Proporcionar información de contacto y facilitar networking profesional</li>
+                <li>Crear una experiencia de usuario fluida y atractiva</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h4>💡 Propósito Educativo</h4>
+            <p>Este proyecto fue desarrollado como parte de los requerimientos académicos de la Universidad Panamericana de Colombia, demostrando competencias en desarrollo web, diseño de interfaces y programación frontend.</p>
+        </div>
+    </div>
+
+    <!-- 2. ESTRUCTURA -->
+    <div class="section">
+        <h2 class="section-title">2. Estructura del Proyecto</h2>
+        
+        <div class="subsection">
+            <h3>Arquitectura de Archivos</h3>
+            <div class="file-tree">
+📁 Portafolio-Web/
+├── 📄 index.html (Página principal)
+├── 📄 sobre-mi.html (Información personal)
+├── 📄 experiencia.html (Trayectoria laboral)
+├── 📄 educacion.html (Formación académica)
+├── 📄 habilidades.html (Skills técnicas)
+├── 📄 proyectos.html (Portfolio de proyectos)
+├── 📄 contacto.html (Formulario de contacto)
+├── 📁 css/
+│   └── 📄 estilos.css (Estilos principales)
+├── 📁 js/
+│   └── 📄 main.js (JavaScript principal)
+└── 📁 images/
+    └── 📄 perfil.jpg (Foto de perfil)
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3>Páginas del Sitio Web</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Página</th>
+                        <th>Descripción</th>
+                        <th>Componentes Principales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>index.html</strong></td>
+                        <td>Página de inicio con hero section</td>
+                        <td>Hero, Estadísticas, Resumen de experiencia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>sobre-mi.html</strong></td>
+                        <td>Historia personal y valores</td>
+                        <td>Biografía, Valores, Intereses, Formación pedagógica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>experiencia.html</strong></td>
+                        <td>Trayectoria laboral completa</td>
+                        <td>Timeline, Logros, Habilidades desarrolladas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>educacion.html</strong></td>
+                        <td>Formación académica y certificaciones</td>
+                        <td>Programas académicos, Certificaciones, Idiomas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>habilidades.html</strong></td>
+                        <td>Stack técnico y competencias</td>
+                        <td>Barras de progreso, Tecnologías, Soft skills</td>
+                    </tr>
+                    <tr>
+                        <td><strong>proyectos.html</strong></td>
+                        <td>Portfolio de proyectos realizados</td>
+                        <td>Cards de proyectos, Logros, Tecnologías aplicadas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>contacto.html</strong></td>
+                        <td>Información de contacto y formulario</td>
+                        <td>Formulario, Métodos de contacto, FAQ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 3. COLORES -->
+    <div class="section">
+        <h2 class="section-title">3. Paleta de Colores y Diseño Visual</h2>
+        
+        <div class="subsection">
+            <h3>Colores Principales</h3>
+            <p>La paleta de colores fue cuidadosamente seleccionada para transmitir <span class="highlight">profesionalismo, modernidad y tecnología</span>. Se utilizó un esquema oscuro (dark mode) como base con acentos vibrantes.</p>
+            
+            <div class="color-palette">
+                <div class="color-item" style="background: #6366f1;">
+                    <div>#6366f1</div>
+                    <div style="font-size: 0.8em; margin-top: 5px;">Primary</div>
+                </div>
+                <div class="color-item" style="background: #ec4899;">
+                    <div>#ec4899</div>
+                    <div style="font-size: 0.8em; margin-top: 5px;">Secondary</div>
+                </div>
+                <div class="color-item" style="background: #10b981;">
+                    <div>#10b981</div>
+                    <div style="font-size: 0.8em; margin-top: 5px;">Accent</div>
+                </div>
+                <div class="color-item" style="background: #0f172a;">
+                    <div>#0f172a</div>
+                    <div style="font-size: 0.8em; margin-top: 5px;">Background</div>
+                </div>
+                <div class="color-item" style="background: #1e293b;">
+                    <div>#1e293b</div>
+                    <div style="font-size: 0.8em; margin-top: 5px;">Secondary BG</div>
+                </div>
+                <div class="color-item" style="background: #f1f5f9;">
+                    <div style="color: #1e293b;">#f1f5f9</div>
+                    <div style="font-size: 0.8em; margin-top: 5px; color: #1e293b;">Text Primary</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3>Código CSS de Variables de Color</h3>
+            <div class="code-block"><code>:root {
+    /* Colores principales */
+    --color-primary: #6366f1;      /* Azul violeta - Principal */
+    --color-primary-dark: #4f46e5; /* Azul violeta oscuro */
+    --color-primary-light: #818cf8;/* Azul violeta claro */
+    --color-secondary: #ec4899;    /* Rosa magenta - Secundario */
+    --color-accent: #10b981;       /* Verde - Acento/Éxito */
+    
+    /* Fondos */
+    --bg-primary: #0f172a;         /* Fondo principal oscuro */
+    --bg-secondary: #1e293b;       /* Fondo secundario */
+    --bg-card: #1e293b;            /* Fondo de tarjetas */
+    
+    /* Textos */
+    --text-primary: #f1f5f9;       /* Texto principal claro */
+    --text-secondary: #cbd5e1;     /* Texto secundario */
+    --text-muted: #94a3b8;         /* Texto atenuado */
+}</code></div>
+            <p><strong>Explicación:</strong> Se utilizan variables CSS (custom properties) para mantener consistencia en los colores a lo largo de todo el sitio. Esto facilita el mantenimiento y permite cambios globales de tema de manera eficiente.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Gradientes Utilizados</h3>
+            <div class="code-block"><code>/* Gradiente principal - Usado en botones y títulos */
+--gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+/* Gradiente secundario - Usado en elementos decorativos */
+--gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+
+/* Gradiente de acento - Usado en elementos interactivos */
+--gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);</code></div>
+            <p><strong>Función:</strong> Los gradientes aportan profundidad visual y modernidad al diseño, utilizados estratégicamente en botones principales, títulos destacados y elementos interactivos para crear jerarquía visual.</p>
+        </div>
+    </div>
+
+    <!-- 4. TECNOLOGÍAS -->
+    <div class="section">
+        <h2 class="section-title">4. Tecnologías Utilizadas</h2>
+        
+        <div class="subsection">
+            <h3>Stack Tecnológico</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript ES6+</span>
+                <span class="tech-badge">Google Fonts</span>
+                <span class="tech-badge">Font Awesome / SVG</span>
+                <span class="tech-badge">Responsive Design</span>
+                <span class="tech-badge">CSS Grid</span>
+                <span class="tech-badge">Flexbox</span>
+                <span class="tech-badge">CSS Variables</span>
+                <span class="tech-badge">Intersection Observer API</span>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h4>🎯 Decisiones Tecnológicas</h4>
+            <p><strong>Sin frameworks:</strong> Se decidió usar HTML, CSS y JavaScript puros (vanilla) para:</p>
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>Demostrar dominio de tecnologías fundamentales</li>
+                <li>Optimizar el rendimiento (menor peso de carga)</li>
+                <li>Mayor control sobre cada aspecto del código</li>
+                <li>Aprendizaje profundo de conceptos base</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Fuentes Tipográficas</h3>
+            <div class="code-block"><code>/* Fuentes importadas de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+/* Variables de fuentes */
+--font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+--font-code: 'Fira Code', 'Courier New', monospace;</code></div>
+            <p><strong>Poppins:</strong> Fuente principal moderna y legible, ideal para interfaces web profesionales.</p>
+            <p><strong>Fira Code:</strong> Fuente monoespaciada para elementos de código y detalles técnicos.</p>
+        </div>
+    </div>
+
+    <!-- 5. HTML -->
+    <div class="section">
+        <h2 class="section-title">5. Estructura HTML - Componentes Clave</h2>
+        
+        <div class="subsection">
+            <h3>Navegación Principal</h3>
+            <div class="code-block"><code>&lt;nav class="navbar"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="nav-brand"&gt;
+            &lt;span class="brand-icon"&gt;&lt;JD/&gt;&lt;/span&gt;
+            &lt;span class="brand-text"&gt;Julián David&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;ul class="nav-menu" id="navMenu"&gt;
+            &lt;li&gt;&lt;a href="index.html" class="nav-link active"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="sobre-mi.html" class="nav-link"&gt;Sobre Mí&lt;/a&gt;&lt;/li&gt;
+            &lt;!-- Más enlaces --&gt;
+        &lt;/ul&gt;
+        &lt;button class="menu-toggle" id="menuToggle"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></div>
+            <p><strong>Explicación del código:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>&lt;nav class="navbar"&gt;</code>: Elemento semántico HTML5 para la navegación principal</li>
+                <li><code>nav-brand</code>: Logo/marca personal con icono estilo código (&lt;JD/&gt;)</li>
+                <li><code>nav-menu</code>: Lista de navegación con enlaces a todas las páginas</li>
+                <li><code>menu-toggle</code>: Botón hamburguesa para menú móvil (3 líneas/spans)</li>
+                <li><strong>JavaScript:</strong> Controla el toggle del menú en dispositivos móviles</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Hero Section (Sección Principal)</h3>
+            <div class="code-block"><code>&lt;section class="hero"&gt;
+    &lt;div class="hero-particles"&gt;&lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="hero-content"&gt;
+            &lt;div class="hero-text"&gt;
+                &lt;p class="hero-greeting"&gt;¡Hola! Soy&lt;/p&gt;
+                &lt;h1 class="hero-title"&gt;
+                    &lt;span class="gradient-text"&gt;Julián David&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;h2 class="hero-subtitle"&gt;
+                    &lt;span class="typing-text"&gt;Software Engineer & Network Specialist&lt;/span&gt;
+                    &lt;span class="cursor"&gt;|&lt;/span&gt;
+                &lt;/h2&gt;
+                &lt;div class="hero-stats"&gt;
+                    &lt;!-- Estadísticas --&gt;
+                &lt;/div&gt;
+                &lt;div class="hero-buttons"&gt;
+                    &lt;!-- Botones de acción --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="hero-image"&gt;
+                &lt;!-- Imagen de perfil --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></div>
+            <p><strong>Componentes del Hero:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>hero-particles</code>: Fondo animado con efectos de partículas CSS</li>
+                <li><code>gradient-text</code>: Texto con gradiente aplicado para el nombre</li>
+                <li><code>typing-text</code>: Efecto de texto escribiéndose (animación CSS)</li>
+                <li><code>cursor</code>: Cursor parpadeante animado con keyframes</li>
+                <li><code>hero-stats</code>: Grid con estadísticas clave (3+ años, 420+ tickets, 95% satisfacción)</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Cards de Información</h3>
+            <div class="code-block"><code>&lt;div class="info-card"&gt;
+    &lt;div class="card-header"&gt;
+        &lt;span class="card-icon"&gt;📍&lt;/span&gt;
+        &lt;h3&gt;Ubicación&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Bogotá D.C., Colombia&lt;/p&gt;
+    &lt;p class="card-detail"&gt;Carrera 121a # 17f-44&lt;/p&gt;
+&lt;/div&gt;</code></div>
+            <p><strong>Propósito:</strong> Tarjetas informativas reutilizables con hover effects. Contienen iconos emoji, título y detalles. Se usan para ubicación, educación, rol actual e idiomas.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Timeline (Línea de Tiempo de Experiencia)</h3>
+            <div class="code-block"><code>&lt;div class="timeline"&gt;
+    &lt;div class="timeline-item"&gt;
+        &lt;div class="timeline-marker"&gt;&lt;/div&gt;
+        &lt;div class="timeline-content"&gt;
+            &lt;span class="timeline-date"&gt;Oct 2024 - Actualidad&lt;/span&gt;
+            &lt;h3&gt;Analista de Apoyo en Centro de Operaciones&lt;/h3&gt;
+            &lt;h4&gt;Consorcio BFTEL&lt;/h4&gt;
+            &lt;ul class="timeline-list"&gt;
+                &lt;li&gt;Responsabilidad 1&lt;/li&gt;
+                &lt;li&gt;Responsabilidad 2&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="tech-tags"&gt;
+                &lt;span class="tech-tag"&gt;OSPF&lt;/span&gt;
+                &lt;span class="tech-tag"&gt;BGP&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></div>
+            <p><strong>Estructura visual:</strong> Una línea vertical (::before pseudo-elemento) conecta círculos marcadores. Cada experiencia laboral tiene su propia tarjeta con fecha, puesto, empresa, responsabilidades y tecnologías. Las animaciones se activan al hacer scroll.</p>
+        </div>
+    </div>
+
+    <!-- 6. CSS -->
+    <div class="section">
+        <h2 class="section-title">6. Estilos CSS - Componentes Principales</h2>
+        
+        <div class="subsection">
+            <h3>Reset y Base Styles</h3>
+            <div class="code-block"><code>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}</code></div>
+            <p><strong>Explicación:</strong> Reset CSS universal para eliminar márgenes y paddings por defecto del navegador. <code>box-sizing: border-box</code> incluye padding y border en el cálculo de tamaño total del elemento.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Sistema de Grid Responsive</h3>
+            <div class="code-block"><code>.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+@media (max-width: 968px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+}</code></div>
+            <p><strong>Funcionalidad:</strong> CSS Grid divide el contenido en dos columnas en desktop (texto e imagen). En tablets/móviles (<968px), se convierte en una sola columna. Las variables CSS (--spacing-2xl) mantienen consistencia en espaciado.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Botones con Efectos</h3>
+            <div class="code-block"><code>.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    transition: all var(--transition-base);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
+}</code></div>
+            <p><strong>Efectos aplicados:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Fondo con gradiente violeta</li>
+                <li>Sombra base con transparencia del color primario</li>
+                <li>Hover: elevación (translateY -2px) y sombra más intensa</li>
+                <li>Transición suave (0.3s) para todas las propiedades</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Animaciones con Keyframes</h3>
+            <div class="code-block"><code>@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-text {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.5; 
+        transform: scale(1.1); 
+    }
+}
+
+.status-dot {
+    animation: pulse 2s ease-in-out infinite;
+}</code></div>
+            <p><strong>Explicación de animaciones:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>slideInLeft</code>: El texto del hero entra desde la izquierda con fade in (0.8s)</li>
+                <li><code>pulse</code>: El punto de estado "Disponible" pulsa continuamente para llamar la atención</li>
+                <li><code>ease-out</code>: Curva de aceleración natural (rápido al inicio, desacelera al final)</li>
+                <li><code>infinite</code>: La animación pulse se repite indefinidamente</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Barras de Progreso de Habilidades</h3>
+            <div class="code-block"><code>.skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width 1s ease-out;
+    width: 0; /* Inicia en 0 */
+}
+
+/* JavaScript anima a: width: 95%; (valor real) */</code></div>
+            <p><strong>Funcionamiento:</strong> Las barras inician en 0% de ancho. Cuando el usuario hace scroll y las ve (Intersection Observer), JavaScript les aplica el ancho real (ej: 95%) con transición CSS de 1 segundo, creando efecto de "llenado".</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Cards con Hover 3D</h3>
+            <div class="code-block"><code>.achievement-card {
+    background: var(--bg-card);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.6s ease-out;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-2xl);
+    border-color: rgba(99, 102, 241, 0.4);
+}</code></div>
+            <p><strong>Efecto hover:</strong> Al pasar el mouse, la tarjeta se eleva 10px, crece ligeramente (scale 1.02), aumenta su sombra y el borde cambia a color primario. Crea sensación de profundidad 3D.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Scrollbar Personalizado</h3>
+            <div class="code-block"><code>::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+    border: 3px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-light);
+}</code></div>
+            <p><strong>Personalización:</strong> Scrollbar de 12px con thumb (deslizador) color primario violeta, bordes redondeados y efecto hover. Mantiene coherencia con la identidad visual del sitio.</p>
+        </div>
+    </div>
+
+    <!-- 7. JAVASCRIPT -->
+    <div class="section">
+        <h2 class="section-title">7. JavaScript - Funcionalidades Interactivas</h2>
+        
+        <div class="subsection">
+            <h3>Menú Mobile Toggle</h3>
+            <div class="code-block"><code>const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener('click', function(event) {
+    const isClickInside = navMenu.contains(event.target) 
+                       || menuToggle.contains(event.target);
+    if (!isClickInside && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    }
+});</code></div>
+            <p><strong>Funcionalidad:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Detecta click en botón hamburguesa</li>
+                <li>Alterna clase 'active' en menú (slide in/out desde izquierda)</li>
+                <li>Anima el botón (X cuando abierto, ≡ cuando cerrado)</li>
+                <li>Cierra automáticamente al hacer click fuera del menú</li>
+                <li>Mejora UX en móviles con menú overlay</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Scroll to Top Button</h3>
+            <div class="code-block"><code>const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});</code></div>
+            <p><strong>Comportamiento:</strong> El botón aparece (fade in) cuando el usuario hace scroll más de 300px hacia abajo. Al hacer click, lleva suavemente al inicio de la página con scroll animado (smooth).</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Intersection Observer - Animaciones al Scroll</h3>
+            <div class="code-block"><code>const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            
+            // Animar barras de progreso
+            if (entry.target.classList.contains('skill-item')) {
+                const progressBar = entry.target.querySelector('.skill-progress');
+                if (progressBar && !progressBar.dataset.animated) {
+                    progressBar.dataset.animated = 'true';
+                    const targetWidth = progressBar.style.width;
+                    progressBar.style.width = '0';
+                    setTimeout(() => {
+                        progressBar.style.width = targetWidth;
+                    }, 100);
+                }
+            }
+        }
+    });
+}, observerOptions);
+
+// Observar elementos
+document.querySelectorAll('.timeline-item, .achievement-card, .skill-item')
+    .forEach(el => observer.observe(el));</code></div>
+            <p><strong>Explicación detallada:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>threshold: 0.2</code>: Activa cuando 20% del elemento es visible</li>
+                <li><code>rootMargin: '0px 0px -50px 0px'</code>: Activa 50px antes del viewport bottom</li>
+                <li><code>isIntersecting</code>: Verifica si elemento entra en viewport</li>
+                <li><code>animate-in</code>: Clase CSS que dispara animación (opacity 0→1, translateY 30px→0)</li>
+                <li><strong>Ventaja:</strong> Más eficiente que scroll listener, solo ejecuta cuando elementos son visibles</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Animación de Contadores</h3>
+            <div class="code-block"><code>function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    const suffix = element.dataset.suffix || '';
+    
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target + suffix;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start) + suffix;
+        }
+    }, 16);
+}</code></div>
+            <p><strong>Funcionamiento:</strong> Anima números desde 0 hasta valor objetivo en 2 segundos. Se ejecuta cada 16ms (60fps). Ejemplo: "3+ años" cuenta de 0 a 3. El sufijo ('+', '%') se preserva. Usado en estadísticas del hero y achievement cards.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Efecto Parallax en Hero</h3>
+            <div class="code-block"><code>let ticking = false;
+
+function updateParallax() {
+    const scrolled = window.pageYOffset;
+    const heroContent = document.querySelector('.hero-content');
+    
+    if (heroContent && scrolled < window.innerHeight) {
+        heroContent.style.transform = `translateY(${scrolled * 0.4}px)`;
+        heroContent.style.opacity = Math.max(0, 1 - (scrolled / 600));
+    }
+    
+    ticking = false;
+}
+
+window.addEventListener('scroll', function() {
+    if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+    }
+});</code></div>
+            <p><strong>Técnica de optimización:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>requestAnimationFrame</code>: Sincroniza con refresh rate del navegador (60fps)</li>
+                <li><code>ticking</code>: Previene ejecuciones múltiples innecesarias</li>
+                <li><code>scrolled * 0.4</code>: Factor de parallax (movimiento más lento que scroll)</li>
+                <li><code>opacity fade</code>: Desvanece el hero al hacer scroll hacia abajo</li>
+                <li>Resultado: Efecto de profundidad suave y profesional</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Navbar Scroll Effect</h3>
+            <div class="code-block"><code>window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        if (window.pageYOffset > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+});</code></div>
+            <p><strong>Comportamiento:</strong> Cuando el usuario hace scroll >50px, el navbar recibe clase 'scrolled' que aumenta su opacidad de fondo y añade sombra, mejorando legibilidad sobre el contenido.</p>
+        </div>
+    </div>
+
+    <!-- 8. CARACTERÍSTICAS -->
+    <div class="section">
+        <h2 class="section-title">8. Características Destacadas del Sitio</h2>
+        
+        <div class="subsection">
+            <h3>✨ Características de Diseño</h3>
+            <ul class="feature-list">
+                <li><strong>Diseño Dark Mode Profesional:</strong> Esquema de colores oscuro que reduce fatiga visual y aporta modernidad</li>
+                <li><strong>Gradientes Vibrantes:</strong> Uso estratégico de gradientes en elementos clave para jerarquía visual</li>
+                <li><strong>Micro-animaciones:</strong> Hover effects, transiciones suaves, animaciones al scroll</li>
+                <li><strong>Tipografía Jerárquica:</strong> Uso de tamaños y pesos tipográficos para guiar al usuario</li>
+                <li><strong>Espaciado Consistente:</strong> Sistema de espaciado basado en variables CSS</li>
+                <li><strong>Iconografía:</strong> Uso de emojis y SVGs para elementos visuales distintivos</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>⚡ Características Técnicas</h3>
+            <ul class="feature-list">
+                <li><strong>100% Responsive:</strong> Adaptable a móviles, tablets y desktop</li>
+                <li><strong>Optimización de Performance:</strong> Lazy loading, requestAnimationFrame, transiciones GPU</li>
+                <li><strong>Accesibilidad:</strong> HTML semántico, focus states, contraste adecuado</li>
+                <li><strong>SEO Friendly:</strong> Meta tags, estructura semántica, títulos descriptivos</li>
+                <li><strong>Cross-browser:</strong> Compatible con Chrome, Firefox, Safari, Edge</li>
+                <li><strong>Código Limpio:</strong> Comentarios, organización modular, naming conventions</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>🎯 Características Interactivas</h3>
+            <ul class="feature-list">
+                <li><strong>Navegación Intuitiva:</strong> Menú sticky con indicador de página activa</li>
+                <li><strong>Formulario de Contacto:</strong> Validación, mensajes de éxito, UX optimizada</li>
+                <li><strong>Animaciones al Scroll:</strong> Elementos que cobran vida al entrar en viewport</li>
+                <li><strong>Timeline Interactivo:</strong> Línea de tiempo visual de experiencia laboral</li>
+                <li><strong>Progress Bars Animadas:</strong> Barras que se llenan al visualizarse</li>
+                <li><strong>Botones con Feedback:</strong> Todos los botones tienen estados hover/active claros</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h4>🎨 Principios de Diseño Aplicados</h4>
+            <p><strong>1. Jerarquía Visual:</strong> Tamaños, colores y espaciado guían la atención del usuario</p>
+            <p><strong>2. Consistencia:</strong> Elementos reutilizables con estilos uniformes</p>
+            <p><strong>3. Feedback Visual:</strong> Todo elemento interactivo responde al hover/click</p>
+            <p><strong>4. White Space:</strong> Uso generoso de espacios en blanco para respirabilidad</p>
+            <p><strong>5. Contraste:</strong> Colores con suficiente contraste para legibilidad óptima</p>
+        </div>
+    </div>
+
+    <!-- 9. RESPONSIVE -->
+    <div class="section">
+        <h2 class="section-title">9. Responsive Design - Adaptabilidad</h2>
+        
+        <div class="subsection">
+            <h3>Breakpoints Utilizados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Breakpoint</th>
+                        <th>Tamaño</th>
+                        <th>Dispositivo</th>
+                        <th>Cambios Principales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Desktop Large</strong></td>
+                        <td>>1400px</td>
+                        <td>Monitores grandes</td>
+                        <td>Container max-width 1320px</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desktop</strong></td>
+                        <td>969px - 1399px</td>
+                        <td>Laptops, Desktop</td>
+                        <td>Layout completo, grid 2 columnas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tablet</strong></td>
+                        <td>641px - 968px</td>
+                        <td>Tablets, iPad</td>
+                        <td>Grid 1 columna, menú móvil</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile</strong></td>
+                        <td>381px - 640px</td>
+                        <td>Smartphones</td>
+                        <td>Botones full width, tipografía reducida</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Small</strong></td>
+                        <td><380px</td>
+                        <td>Smartphones pequeños</td>
+                        <td>Tamaños mínimos, ajustes críticos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="subsection">
+            <h3>Código Media Query - Ejemplo Tablet</h3>
+            <div class="code-block"><code>@media (max-width: 968px) {
+    /* Hero en columna única */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* Menú móvil */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(10px);
+        transition: left 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        left: 0; /* Slide in desde izquierda */
+    }
+    
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+}</code></div>
+            <p><strong>Estrategia responsive:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Mobile-first approach: estilos base para móvil, media queries para desktop</li>
+                <li>Grid y Flexbox se adaptan automáticamente</li>
+                <li>Menú se convierte en overlay fullscreen en móviles</li>
+                <li>Imágenes usan max-width: 100% para adaptarse</li>
+                <li>Tipografía usa clamp() para escalar fluidamente</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Tipografía Fluida con Clamp()</h3>
+            <div class="code-block"><code>.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+}</code></div>
+            <p><strong>Función clamp():</strong> Define tamaño de fuente fluido con mínimo (2.5rem), preferido (6vw basado en viewport), y máximo (4rem). Se adapta automáticamente sin media queries adicionales.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Optimizaciones Móviles</h3>
+            <div class="code-block"><code>/* Prevenir zoom en inputs iOS */
+if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        if (parseFloat(getComputedStyle(input).fontSize) < 16) {
+            input.style.fontSize = '16px';
+        }
+    });
+}</code></div>
+            <p><strong>Problema resuelto:</strong> iOS hace zoom automático en inputs con font-size <16px. Este código previene ese comportamiento estableciendo mínimo de 16px, mejorando UX en iPhone/iPad.</p>
+        </div>
+    </div>
+
+    <!-- 10. CONCLUSIONES -->
+    <div class="section">
+        <h2 class="section-title">10. Conclusiones y Aprendizajes</h2>
+        
+        <div class="subsection">
+            <h3>🎓 Conocimientos Aplicados</h3>
+            <p>Este proyecto representa la aplicación práctica de conocimientos fundamentales en desarrollo web frontend:</p>
+            
+            <div class="info-box">
+                <h4>HTML5 Semántico</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Uso correcto de etiquetas semánticas (nav, section, article, footer)</li>
+                    <li>Estructura jerárquica clara con headings (h1-h6)</li>
+                    <li>Accesibilidad con ARIA labels y atributos alt</li>
+                    <li>Formularios con validación HTML5</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 20px;">
+                <h4>CSS3 Avanzado</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>CSS Grid y Flexbox para layouts complejos</li>
+                    <li>Variables CSS para theming consistente</li>
+                    <li>Animaciones y transiciones fluidas con keyframes</li>
+                    <li>Pseudo-elementos y pseudo-clases para efectos avanzados</li>
+                    <li>Media queries para diseño responsive completo</li>
+                    <li>Gradientes, sombras y efectos visuales modernos</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 20px;">
+                <h4>JavaScript Moderno</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Manipulación del DOM con querySelector/getElementById</li>
+                    <li>Event listeners para interactividad</li>
+                    <li>Intersection Observer API para animaciones eficientes</li>
+                    <li>Funciones modernas (arrow functions, const/let)</li>
+                    <li>Optimización con requestAnimationFrame</li>
+                    <li>Manejo de estados y clases dinámicas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3>💡 Logros del Proyecto</h3>
+            <ul class="feature-list">
+                <li><strong>Diseño Profesional:</strong> Sitio visualmente atractivo que compite con portafolios profesionales</li>
+                <li><strong>Código Limpio:</strong> Organizado, comentado y siguiendo buenas prácticas</li>
+                <li><strong>Performance Óptimo:</strong> Carga rápida, animaciones fluidas, sin bibliotecas pesadas</li>
+                <li><strong>Completamente Funcional:</strong> 7 páginas interconectadas con navegación fluida</li>
+                <li><strong>Responsive Total:</strong> Funciona perfectamente en cualquier dispositivo</li>
+                <li><strong>Accesible:</strong> Diseño inclusivo con consideraciones de accesibilidad</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>📊 Métricas del Proyecto</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Páginas HTML</strong></td>
+                        <td>7</td>
+                        <td>Páginas completas e interconectadas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Líneas CSS</strong></td>
+                        <td>~2000</td>
+                        <td>Estilos organizados y comentados</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Líneas JavaScript</strong></td>
+                        <td>~400</td>
+                        <td>Funcionalidades interactivas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Componentes CSS</strong></td>
+                        <td>50+</td>
+                        <td>Clases reutilizables y modulares</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Animaciones</strong></td>
+                        <td>15+</td>
+                        <td>Keyframes y transiciones CSS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsive Breakpoints</strong></td>
+                        <td>5</td>
+                        <td>Optimización multi-dispositivo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="subsection">
+            <h3>🚀 Mejoras Futuras Potenciales</h3>
+            <ul style="margin-left: 20px;">
+                <li><strong>Backend Integration:</strong> Conectar formulario con servicio de email (EmailJS, Formspree)</li>
+                <li><strong>Blog Section:</strong> Añadir sección de blog con artículos técnicos</li>
+                <li><strong>Dark/Light Toggle:</strong> Opción para cambiar entre temas</li>
+                <li><strong>Multi-idioma:</strong> Soporte para inglés además de español</li>
+                <li><strong>Analytics:</strong> Integración con Google Analytics para métricas</li>
+                <li><strong>PWA:</strong> Convertir en Progressive Web App</li>
+                <li><strong>Animaciones Avanzadas:</strong> Integrar bibliotecas como GSAP o Framer Motion</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h4>✅ Cumplimiento de Requisitos Académicos</h4>
+            <p>Este proyecto cumple completamente con los requisitos de la Universidad Panamericana:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>✓ Documentación técnica completa y detallada</li>
+                <li>✓ Explicación de código con ejemplos visuales</li>
+                <li>✓ Descripción de colores, fuentes y elementos de diseño</li>
+                <li>✓ Demostración de funcionalidades y componentes</li>
+                <li>✓ Estructura clara y organizada del proyecto</li>
+                <li>✓ Aplicación práctica de conocimientos de la carrera</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RESUMEN FINAL -->
+    <div class="section">
+        <h2 class="section-title">📝 Resumen Ejecutivo</h2>
+        
+        <div class="subsection">
+            <p class="lead" style="font-size: 1.1em; line-height: 1.8; color: #334155;">
+                El <strong>Portafolio Web de Julián David Góngora</strong> es un proyecto web completo desarrollado con tecnologías fundamentales (HTML5, CSS3, JavaScript) que demuestra competencias avanzadas en desarrollo frontend. Con <span class="highlight">7 páginas interconectadas</span>, más de <span class="highlight">2000 líneas de CSS</span> y <span class="highlight">400 líneas de JavaScript</span>, el sitio presenta un diseño moderno tipo "dark mode" con gradientes vibrantes, animaciones fluidas y total responsividad.
+            </p>
+            
+            <p style="margin-top: 20px; line-height: 1.8; color: #334155;">
+                Las <strong>funcionalidades JavaScript</strong> incluyen menú móvil responsive, scroll animations con Intersection Observer API, animación de contadores, efecto parallax, y navegación suave. El código está optimizado utilizando requestAnimationFrame para 60fps consistentes.
+            </p>
+            
+            <p style="margin-top: 20px; line-height: 1.8; color: #334155;">
+                El diseño es <strong>completamente responsive</strong> con 5 breakpoints (desktop large, desktop, tablet, mobile, mobile small) que adaptan el layout mediante CSS Grid y Flexbox. Se implementaron técnicas avanzadas como tipografía fluida con clamp(), variables CSS para theming consistente, y micro-animaciones para mejorar la experiencia de usuario.
+            </p>
+            
+            <p style="margin-top: 20px; line-height: 1.8; color: #334155;">
+                Este proyecto demuestra <strong>dominio completo</strong> del stack frontend fundamental, aplicando principios de diseño UI/UX modernos, optimización de performance, accesibilidad web y buenas prácticas de código limpio y mantenible.
+            </p>
+        </div>
+
+        <div class="subsection" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1)); border-left: 4px solid #667eea; padding: 30px; border-radius: 15px; margin-top: 30px;">
+            <h3 style="color: #667eea; margin-bottom: 20px;">🎯 Valor Académico y Profesional</h3>
+            <p style="line-height: 1.8;">
+                Este portafolio web no solo cumple con los requisitos académicos de la Universidad Panamericana, sino que representa una <strong>herramienta profesional real</strong> para networking y búsqueda de oportunidades laborales. El proyecto integra conocimientos de múltiples áreas:
+            </p>
+            <ul style="margin-top: 15px; margin-left: 20px; line-height: 2;">
+                <li><strong>Diseño Gráfico:</strong> Paleta de colores, tipografía, jerarquía visual</li>
+                <li><strong>Programación:</strong> HTML5, CSS3, JavaScript ES6+</li>
+                <li><strong>UX/UI:</strong> Usabilidad, accesibilidad, interactividad</li>
+                <li><strong>Responsive Design:</strong> Adaptabilidad multi-dispositivo</li>
+                <li><strong>Performance:</strong> Optimización, animaciones eficientes</li>
+                <li><strong>Documentación:</strong> Código comentado, buenas prácticas</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ANEXOS TÉCNICOS -->
+    <div class="section">
+        <h2 class="section-title">📚 Anexos Técnicos</h2>
+        
+        <div class="subsection">
+            <h3>Variables CSS Completas</h3>
+            <div class="code-block"><code>:root {
+    /* Colores principales */
+    --color-primary: #6366f1;
+    --color-primary-dark: #4f46e5;
+    --color-primary-light: #818cf8;
+    --color-secondary: #ec4899;
+    --color-secondary-dark: #db2777;
+    --color-accent: #10b981;
+    --color-warning: #f59e0b;
+    
+    /* Colores de fondo */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-card: #1e293b;
+    --bg-hover: #2d3b52;
+    
+    /* Colores de texto */
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;    /* 8px */
+    --spacing-sm: 1rem;      /* 16px */
+    --spacing-md: 1.5rem;    /* 24px */
+    --spacing-lg: 2rem;      /* 32px */
+    --spacing-xl: 3rem;      /* 48px */
+    --spacing-2xl: 4rem;     /* 64px */
+    
+    /* Tipografía */
+    --font-primary: 'Poppins', sans-serif;
+    --font-code: 'Fira Code', monospace;
+    
+    /* Transiciones */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Border radius */
+    --radius-sm: 0.375rem;   /* 6px */
+    --radius-md: 0.5rem;     /* 8px */
+    --radius-lg: 0.75rem;    /* 12px */
+    --radius-xl: 1rem;       /* 16px */
+    --radius-2xl: 1.5rem;    /* 24px */
+    --radius-full: 9999px;   /* Completamente redondeado */
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.3);
+}</code></div>
+            <p><strong>Beneficios del sistema de variables:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Mantenimiento centralizado de valores</li>
+                <li>Cambios globales con una sola edición</li>
+                <li>Consistencia visual automática</li>
+                <li>Facilita implementación de temas alternativos</li>
+                <li>Código más legible y autodocumentado</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Estructura de Archivos Detallada</h3>
+            <div class="file-tree">
+📁 proyecto-portafolio/
+│
+├── 📄 index.html                 (Página principal - 500 líneas)
+├── 📄 sobre-mi.html              (Biografía - 450 líneas)
+├── 📄 experiencia.html           (Timeline laboral - 550 líneas)
+├── 📄 educacion.html             (Formación - 480 líneas)
+├── 📄 habilidades.html           (Skills técnicas - 520 líneas)
+├── 📄 proyectos.html             (Portfolio - 580 líneas)
+├── 📄 contacto.html              (Formulario - 420 líneas)
+│
+├── 📁 css/
+│   └── 📄 estilos.css            (Estilos principales - 2000+ líneas)
+│       ├── Variables CSS (líneas 1-80)
+│       ├── Reset y Base (líneas 81-150)
+│       ├── Navegación (líneas 151-250)
+│       ├── Hero Section (líneas 251-450)
+│       ├── Components (líneas 451-1200)
+│       ├── Responsive (líneas 1201-1600)
+│       └── Utilidades (líneas 1601-2000)
+│
+├── 📁 js/
+│   └── 📄 main.js                (JavaScript principal - 400+ líneas)
+│       ├── Menú móvil (líneas 1-40)
+│       ├── Scroll effects (líneas 41-100)
+│       ├── Animaciones (líneas 101-200)
+│       ├── Intersection Observer (líneas 201-280)
+│       ├── Utilidades (líneas 281-350)
+│       └── Optimizaciones (líneas 351-400)
+│
+├── 📁 images/
+│   ├── 📄 perfil.jpg             (Foto de perfil - optimizada)
+│   └── 📄 favicon.ico            (Icono del sitio)
+│
+└── 📄 README.md                  (Documentación del proyecto)
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3>Componentes CSS Reutilizables</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Clase CSS</th>
+                        <th>Uso</th>
+                        <th>Líneas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Botones</td>
+                        <td>.btn, .btn-primary, .btn-secondary</td>
+                        <td>Acciones principales y secundarias</td>
+                        <td>~80</td>
+                    </tr>
+                    <tr>
+                        <td>Cards</td>
+                        <td>.info-card, .achievement-card</td>
+                        <td>Contenedores de información</td>
+                        <td>~120</td>
+                    </tr>
+                    <tr>
+                        <td>Timeline</td>
+                        <td>.timeline, .timeline-item</td>
+                        <td>Línea de tiempo de experiencia</td>
+                        <td>~150</td>
+                    </tr>
+                    <tr>
+                        <td>Skills</td>
+                        <td>.skill-bar, .skill-progress</td>
+                        <td>Barras de progreso de habilidades</td>
+                        <td>~60</td>
+                    </tr>
+                    <tr>
+                        <td>Navegación</td>
+                        <td>.navbar, .nav-link</td>
+                        <td>Menú de navegación</td>
+                        <td>~100</td>
+                    </tr>
+                    <tr>
+                        <td>Hero</td>
+                        <td>.hero, .hero-content</td>
+                        <td>Sección principal de inicio</td>
+                        <td>~200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="subsection">
+            <h3>Paleta de Colores Extendida</h3>
+            <div style="background: white; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h4 style="color: #334155; margin-bottom: 15px;">Colores Primarios y Secundarios</h4>
+                <div class="color-palette">
+                    <div class="color-item" style="background: #6366f1;">
+                        <div>#6366f1</div>
+                        <div style="font-size: 0.7em;">Primary</div>
+                    </div>
+                    <div class="color-item" style="background: #4f46e5;">
+                        <div>#4f46e5</div>
+                        <div style="font-size: 0.7em;">Primary Dark</div>
+                    </div>
+                    <div class="color-item" style="background: #818cf8;">
+                        <div>#818cf8</div>
+                        <div style="font-size: 0.7em;">Primary Light</div>
+                    </div>
+                </div>
+                <div class="color-palette" style="margin-top: 15px;">
+                    <div class="color-item" style="background: #ec4899;">
+                        <div>#ec4899</div>
+                        <div style="font-size: 0.7em;">Secondary</div>
+                    </div>
+                    <div class="color-item" style="background: #db2777;">
+                        <div>#db2777</div>
+                        <div style="font-size: 0.7em;">Secondary Dark</div>
+                    </div>
+                    <div class="color-item" style="background: #10b981;">
+                        <div>#10b981</div>
+                        <div style="font-size: 0.7em;">Accent</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #334155; margin-top: 30px; margin-bottom: 15px;">Colores de Fondo (Dark Mode)</h4>
+                <div class="color-palette">
+                    <div class="color-item" style="background: #0f172a;">
+                        <div>#0f172a</div>
+                        <div style="font-size: 0.7em;">BG Primary</div>
+                    </div>
+                    <div class="color-item" style="background: #1e293b;">
+                        <div>#1e293b</div>
+                        <div style="font-size: 0.7em;">BG Secondary</div>
+                    </div>
+                    <div class="color-item" style="background: #334155;">
+                        <div>#334155</div>
+                        <div style="font-size: 0.7em;">BG Tertiary</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #334155; margin-top: 30px; margin-bottom: 15px;">Colores de Texto</h4>
+                <div class="color-palette">
+                    <div class="color-item" style="background: #f1f5f9;">
+                        <div style="color: #1e293b;">#f1f5f9</div>
+                        <div style="font-size: 0.7em; color: #1e293b;">Text Primary</div>
+                    </div>
+                    <div class="color-item" style="background: #cbd5e1;">
+                        <div style="color: #1e293b;">#cbd5e1</div>
+                        <div style="font-size: 0.7em; color: #1e293b;">Text Secondary</div>
+                    </div>
+                    <div class="color-item" style="background: #94a3b8;">
+                        <div style="color: #1e293b;">#94a3b8</div>
+                        <div style="font-size: 0.7em; color: #1e293b;">Text Muted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GLOSARIO TÉCNICO -->
+    <div class="section">
+        <h2 class="section-title">📖 Glosario de Términos Técnicos</h2>
+        
+        <div class="subsection">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Término</th>
+                        <th>Definición</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CSS Variables</strong></td>
+                        <td>Propiedades CSS personalizadas que permiten reutilizar valores (colores, tamaños) en todo el stylesheet</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flexbox</strong></td>
+                        <td>Sistema de layout CSS unidimensional para organizar elementos en filas o columnas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CSS Grid</strong></td>
+                        <td>Sistema de layout CSS bidimensional para crear diseños complejos con filas y columnas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsive Design</strong></td>
+                        <td>Enfoque de diseño web que adapta el layout a diferentes tamaños de pantalla</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Media Queries</strong></td>
+                        <td>Reglas CSS que aplican estilos según características del dispositivo (ancho, alto, orientación)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Breakpoint</strong></td>
+                        <td>Punto específico de ancho de pantalla donde el diseño cambia para adaptarse mejor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intersection Observer</strong></td>
+                        <td>API de JavaScript que detecta cuando un elemento entra/sale del viewport del navegador</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Keyframes</strong></td>
+                        <td>Regla CSS para definir animaciones con estados inicial, intermedio y final</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Viewport</strong></td>
+                        <td>Área visible de la página web en el navegador</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DOM</strong></td>
+                        <td>Document Object Model - Representación en árbol de elementos HTML que JavaScript puede manipular</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Event Listener</strong></td>
+                        <td>Función JavaScript que espera y responde a eventos del usuario (click, scroll, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pseudo-elementos</strong></td>
+                        <td>Elementos CSS virtuales (::before, ::after) que añaden contenido decorativo sin HTML adicional</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semantic HTML</strong></td>
+                        <td>Uso de etiquetas HTML que describen su significado (nav, article, section) en lugar de genéricas (div)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parallax</strong></td>
+                        <td>Efecto visual donde elementos de fondo se mueven más lento que los de primer plano al hacer scroll</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clamp()</strong></td>
+                        <td>Función CSS que define un valor entre un mínimo y máximo, con preferencia en el medio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- REFERENCIAS -->
+    <div class="section">
+        <h2 class="section-title">📚 Referencias y Recursos</h2>
+        
+        <div class="subsection">
+            <h3>Recursos Utilizados</h3>
+            <ul style="line-height: 2; margin-left: 20px;">
+                <li><strong>Google Fonts:</strong> fonts.google.com - Poppins y Fira Code</li>
+                <li><strong>MDN Web Docs:</strong> developer.mozilla.org - Documentación HTML/CSS/JS</li>
+                <li><strong>CSS-Tricks:</strong> css-tricks.com - Guías de Flexbox y Grid</li>
+                <li><strong>Can I Use:</strong> caniuse.com - Compatibilidad de navegadores</li>
+                <li><strong>ColorHunt:</strong> colorhunt.co - Inspiración de paletas de colores</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Herramientas de Desarrollo</h3>
+            <ul style="line-height: 2; margin-left: 20px;">
+                <li><strong>Visual Studio Code:</strong> Editor de código principal</li>
+                <li><strong>Chrome DevTools:</strong> Debugging y testing responsive</li>
+                <li><strong>Git/GitHub:</strong> Control de versiones del proyecto</li>
+                <li><strong>Lighthouse:</strong> Auditoría de performance y accesibilidad</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CIERRE -->
+    <div class="section" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 50px 40px; border-radius: 20px; text-align: center; margin-top: 50px;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px;">✨ Fin de la Documentación</h2>
+        <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 25px;">
+            Este documento presenta de manera completa y detallada todos los aspectos técnicos, de diseño y funcionales del Portafolio Web de Julián David Góngora.
+        </p>
+        <p style="font-size: 1em; opacity: 0.9; margin-bottom: 20px;">
+            <strong>Desarrollado por:</strong> Julián David Góngora<br>
+            <strong>Universidad:</strong> Panamericana de Colombia<br>
+            <strong>Programa:</strong> Ingeniería de Software - 5to Semestre<br>
+            <strong>Año:</strong> 2025
+        </p>
+        <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.3);">
+            <p style="font-size: 0.9em; opacity: 0.8;">
+                Para guardar este documento como PDF, haz click en el botón "Guardar como PDF" en la esquina superior derecha
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>height: 1.8; color: #334155;">
+                La <strong>paleta de colores</strong> utiliza un fondo oscuro (#0f172a) complementado con colores primarios vibrantes (violeta #6366f1, rosa #ec4899, verde #10b981) aplicados estratégicamente en gradientes. La <strong>tipografía</strong> combina Poppins (moderna y legible) con Fira Code (para elementos técnicos), implementadas mediante Google Fonts.
+            </p>
+            
+            <p style="margin-top: 20px; line-
